@@ -66,9 +66,9 @@ function onClickStartTimerBtn() {
   });
 
   timerId = setInterval(() => {
-
+    // отримуємо різницю між вибраною датою та поточною
     const timerDate = new Date(inputDate.value) - Date.now();
-
+    
     if (timerDate > 0) {
       refs.startBtn.disabled = false;
       startTimer(timerDate);
