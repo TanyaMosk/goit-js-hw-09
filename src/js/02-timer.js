@@ -88,6 +88,7 @@ function onClickStartTimerBtn() {
   }, 1000);
 }
 function startTimer(time) {
+  refs.startBtn.disabled = true;
   const { days, hours, minutes, seconds } = convertMs(time);
   setTimeTextContent({ days, hours, minutes, seconds });
 }
