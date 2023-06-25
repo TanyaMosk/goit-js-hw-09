@@ -4,8 +4,7 @@ import Notiflix from 'notiflix';
 import 'flatpickr/dist/flatpickr.min.css';
 
 const refs = {
-  inputDate: document.querySelector('input#datetime-picker'),
-  // tim er: document.querySelector('.timer'),
+  inputDate: document.querySelector('input#datetime-picker'), 
   dataDay: document.querySelector('[data-days]'),
   dataHours: document.querySelector('[data-hours]'),
   dataMinutes: document.querySelector('[data-minutes]'),
@@ -27,6 +26,7 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     console.log(selectedDates[0]);
+    // Виконуємо перевірку вибраної та поточної дати   
     const selectedDate = selectedDates[0];
     const currentDate = new Date();
     if (selectedDate > currentDate) {

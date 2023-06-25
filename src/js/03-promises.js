@@ -1,4 +1,3 @@
-
 import Notiflix from 'notiflix';
 
 const refs = {
@@ -12,6 +11,7 @@ const refs = {
 const { inputDelay, inputStep, inputAmount } = refs;
 
 refs.formBtn.addEventListener('click', onFormBtnClick);
+
 document.body.style.backgroundColor = '#303238';
 
 function onFormBtnClick(evt) {
@@ -20,10 +20,9 @@ function onFormBtnClick(evt) {
   const delay = Number(inputDelay.value);
   const steps = Number(inputStep.value);
   const amount = Number(inputAmount.value);
-  // console.log(delay, steps, amount);
-
+ 
   for (let i = 1; i <= amount; i += 1) {
-    //генер. послід. значень затримки promise
+    //Визначаємо значення затримки - генер. послід. значення затримки promise
     const delayValueGener = delay + (i - 1) * steps;
     
     createPromise(i, delayValueGener)
